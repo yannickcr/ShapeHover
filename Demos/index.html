@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>ShapeHover Demo</title>
+	<script type="text/javascript" src="Mootools.Core.js"></script>
+	<script type="text/javascript" src="Mootools.More.js"></script>
+	<script type="text/javascript" src="../Source/ShapeHover.js"></script>
+	<link rel="stylesheet" type="text/css" href="demo.css" media="screen" />
+</head>
+<body>
+	<h1>ShapeHover Demo</h1>
+	<div id="container">
+		<div class="block">
+			<h2>Example 1</h2>
+			<p>Hover effect using another image.</p>
+			<img id="world2" src="map1.png" alt="World map 2" usemap="#worldmap2" width="564" height="255" />
+			<map name="worldmap2">
+				<area shape="poly" coords="159,6,159,10,168,33,220,81,232,81,238,78,254,77,264,85,284,85,277,72,282,72,290,68,305,69,316,74,317,60,314,52,320,50,326,52,327,48,324,47,321,45,323,40,319,28,326,23,316,0,180,0" href="#" alt="1" />
+				<area shape="poly" coords="441,163,432,173,361,149,356,129,312,126,291,93,277,72,283,72,290,68,304,69,316,74,317,59,315,51,328,52,328,47,322,45,325,42,320,29,327,24,317,0,546,0,546,154,446,141" href="#" alt="2" />
+				<area shape="poly" coords="446,141,444,151,441,163,429,177,424,210,427,222,464,233,478,238,494,242,522,242,564,223,564,157,492,147" href="#" alt="3" />
+				<area shape="poly" coords="312,126,348,129,332,218,268,217,249,190,240,143,209,142,189,117,220,81,232,81,238,78,254,77,264,85,286,86" href="#" alt="4" />
+				<area shape="poly" coords="109,124,87,141,53,116,35,107,12,68,0,47,0,25,0,0,176,1,146,11,159,25,158,58,128,132" href="#" alt="5" />
+				<area shape="poly" coords="109,124,86,142,92,168,102,194,105,215,110,237,131,255,155,255,149,237,167,202,179,162,150,135,127,132" href="#" alt="6" />
+			</map>
+			<script type="text/javascript">
+				new ShapeHover(document.id('world2'), {
+					fill: {
+						type: 'image',
+						content: 'map2.png'
+					},
+					stroke: false
+				});
+			</script>
+		</div>
+<!-- ---- -->
+		<div class="block">
+			<h2>Example 2</h2>
+			<p>Hover effect using a strong color and some onclick events.</p>
+			<img id="world" src="map1.png" alt="World map" usemap="#worldmap" width="564" height="255" />
+			<map name="worldmap">
+				<area shape="poly" coords="159,6,159,10,168,33,220,81,232,81,238,78,254,77,264,85,284,85,277,72,282,72,290,68,305,69,316,74,317,60,314,52,320,50,326,52,327,48,324,47,321,45,323,40,319,28,326,23,316,0,180,0" href="#" alt="1" />
+				<area shape="poly" coords="441,163,432,173,361,149,356,129,312,126,291,93,277,72,283,72,290,68,304,69,316,74,317,59,315,51,328,52,328,47,322,45,325,42,320,29,327,24,317,0,546,0,546,154,446,141" href="#" alt="2" />
+				<area shape="poly" coords="446,141,444,151,441,163,429,177,424,210,427,222,464,233,478,238,494,242,522,242,564,223,564,157,492,147" href="#" alt="3" />
+				<area shape="poly" coords="312,126,348,129,332,218,268,217,249,190,240,143,209,142,189,117,220,81,232,81,238,78,254,77,264,85,286,86" href="#" alt="4" />
+				<area shape="poly" coords="109,124,87,141,53,116,35,107,12,68,0,47,0,25,0,0,176,1,146,11,159,25,158,58,128,132" href="#" alt="5" />
+				<area shape="poly" coords="109,124,86,142,92,168,102,194,105,215,110,237,131,255,155,255,149,237,167,202,179,162,150,135,127,132" href="#" alt="6" />
+			</map>
+			<script type="text/javascript">
+				new ShapeHover(document.id('world'), {
+					fill: {
+						type: 'color',
+						content: '#F00'
+					},
+					stroke: false,
+					onClick: function(e){
+						alert('Thanks for choosing the area "' + document.id(e.stop().target).get('alt') + '"');
+					}
+				});
+			</script>
+		</div>
+	</div>
+</body>
+</html>
