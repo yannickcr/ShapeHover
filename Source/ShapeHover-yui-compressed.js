@@ -1,6 +1,6 @@
 /*
 ---
-script: ShapeHover.js
+script: ShapeHover-yui-compressed.js
 
 description: Add rollover effect on an image map
 
