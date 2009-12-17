@@ -1,14 +1,12 @@
 /*
 ---
+script: ShapeHover.js
+
 description: Add rollover effect on an image map
 
 license: MIT-style license.
 
-authors:
-- Yannick Croissant
-
-inspiration:
-- Inspired by [jQuery Maphilight](http://davidlynch.org/js/maphilight/docs/) Copyright (c) 2008 [David Lynch](http://davidlynch.org), [MIT License](http://opensource.org/licenses/mit-license.php)
+authors: Yannick Croissant
 
 requires:
  core/1.2.3: '*'
