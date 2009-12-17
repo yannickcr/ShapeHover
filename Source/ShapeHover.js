@@ -11,8 +11,8 @@ inspiration:
 - Inspired by [jQuery Maphilight](http://davidlynch.org/js/maphilight/docs/) Copyright (c) 2008 [David Lynch](http://davidlynch.org), [MIT License](http://opensource.org/licenses/mit-license.php)
 
 requires:
-- core/1.2.3: '*'
-- more/1.2.3.1: [Assets]
+ core/1.2.3: '*'
+ more/1.2.3.1: [Assets]
 
 provides: [ShapeHover]
 
