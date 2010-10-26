@@ -14,7 +14,6 @@ To use ShapeHover, you need an image with an image map in your HTML. Just call t
 
 HTML:
 
-	#HTML
 	<img id="myimage" width="40" height="20" usemap="#mymap" alt="My Image" src="myimage.png"/>
 	<map name="mymap">
 		<area shape="poly" coords="0,0,20,0,20,20,0,20" href="http://www.area-1.com" alt="Area 1"/>
@@ -23,12 +22,10 @@ HTML:
 
 CSS:
 
-	#JS
 	img { border:0 }
 
 JavaScript:
 
-	#JS
 	new ShapeHover('myimage', {
 		fill: {
 			type: 'color',
