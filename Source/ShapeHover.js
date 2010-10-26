@@ -13,7 +13,7 @@ inspiration:
 
 requires:
 	core/1.2.3: '*'
-	more/1.2.3.1: [Assets]
+	more/1.2.3.1: [Assets, Array.Extras]
 
 provides: [ShapeHover]
 
