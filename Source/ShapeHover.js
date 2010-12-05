@@ -9,8 +9,8 @@ license: MIT-style license.
 authors: Yannick Croissant
 
 requires:
- core/1.2.3: '*'
- more/1.2.3.1: [Assets, Array.Extras]
+ core/1.3: '*'
+ more/1.3.0.1: [Assets, Array.Extras]
 
 provides: [ShapeHover]
 
@@ -21,7 +21,11 @@ var ShapeHover = new Class({
 
 	Implements: [Options, Events],
 	
-	options: {
+	options: {/*
+		onReady: function(event){},
+		onMouseOver: function(event){},
+		onMouseOut: function(event){},
+		onClick: function(event){}, */
 		fill: {				// Set it to false to disable filling
 			type: 'color',	// Can be color or image
 			content: '#000',// Can be a color (in hex) or an absolute image path
@@ -33,11 +37,7 @@ var ShapeHover = new Class({
 			width: 1		// Width in px
 		},
 		fade: true,			// Fade effect on :hover (canvas only)
-		alwaysOn: false,		// If true, all areas got the :hover style by default,
-		onReady: $empty,
-		onMouseOver: $empty,
-		onMouseOut: $empty,
-		onClick: $empty
+		alwaysOn: false		// If true, all areas got the :hover style by default
 	},
 
 	/*
@@ -90,7 +90,7 @@ var ShapeHover = new Class({
 		
 		// Render the image transparent, and inject it in the wrapper
 		this.element.style.opacity = 0;
-		if(Browser.Engine.trident) this.element.style.filter = 'Alpha(opacity=0)';
+		if(Browser.ie) this.element.style.filter = 'Alpha(opacity=0)';
 		this.element.setStyles({position: 'absolute', left: 0, top: 0, padding: 0, border: 0});
 		this.wrap.adopt(this.element);
 		
