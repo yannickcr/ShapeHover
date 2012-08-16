@@ -3,7 +3,7 @@ ShapeHover
 
 ShapeHover add rollover effect on an image map using canvas or vml. It allows you to make some nices rollover menus with non-rectangular areas and it degrades gracefully in a simple image map if javascript is disabled or if the browser do not support canvas/vml.
 
-![Screenshot](http://github.com/Country/ShapeHover/raw/master/logo.png)
+![Screenshot](http://github.com/yannickcr/ShapeHover/raw/master/logo.png)
 
 How to use
 ----------
